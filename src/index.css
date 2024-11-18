@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Museo Sans Rounded";
+  src: url(`/src/assets/fonts/museo-sans-rounded-700.woff`) format("woff"),
+    url(`/src/assets/fonts/museo-sans-rounded-700.tff`) format("tff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+:root {
+  /* Colors: */
+  --unnamed-color-ff6752: #ff6752;
+  --unnamed-color-4487ff: #4487ff;
+  --unnamed-color-f8f8f8: #f8f8f8;
+  --unnamed-color-00225c: #00225c;
+  --unnamed-color-808080: #808080;
+  --unnamed-color-fd6845: #fd6845;
+  --unnamed-color-b1bbcd: #b1bbcd;
+  --unnamed-color-fe6845: #fe6845;
+  --unnamed-color-7569de: #7569de;
+  --unnamed-color-ffa046: #ffa046;
+  --unnamed-color-9ecb45: #9ecb45;
+  --muted-color: #a4afb7;
+}
+
+.bg-auth {
+  background: #fe6845;
+}
+
+.box {
+  --mask: radial-gradient(
+        121.08px at calc(100% - 171px) 50%,
+        #000 99%,
+        #0000 101%
+      )
+      0 calc(50% - 180px) / 100% 360px,
+    radial-gradient(121.08px at calc(100% + 81px) 50%, #0000 99%, #000 101%)
+      calc(100% - 90px) 50%/100% 360px repeat-y;
+  -webkit-mask: var(--mask);
+  mask: var(--mask);
+}
+
+.input-shadow {
+  box-shadow: 2px 3px 4px #00000029;
+  background: #ffffff 0% 0% no-repeat padding-box;
+}
+
+.main-button {
+  background: var(--unnamed-color-4487ff) 0% 0% no-repeat padding-box;
+  color: #f8f8f8;
+  padding: 16px 32px;
+  box-shadow: 0px 3px 6px #2c1dad29;
+  border-radius: 38px;
+}
