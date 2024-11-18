@@ -1,14 +1,16 @@
-import Navbar from "../components/Navbar"
-import Hero from "./sections/Hero"
-import Services from "./sections/Services"
+import Footer from "../components/Footer";
+import Navbar from "../components/Navbar";
+import Hero from "./sections/Hero";
+import Services from "./sections/Services";
 
 const Home = () => {
   return (
     <>
-    <Navbar />
-    <Hero />
-    <Services />
+      <Navbar />
+      <Hero />
+      <Services />
+      <Footer />
     </>
-  )
-}
-export default Home
+  );
+};
+export default Home;

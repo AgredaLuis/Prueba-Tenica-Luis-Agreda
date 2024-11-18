@@ -2,6 +2,7 @@ import { useForm, SubmitHandler } from "react-hook-form";
 import { useState } from "react";
 import { useGlobalContext } from "../../../context/global.context";
 import { loginUser } from "../../../services";
+import { Link, useNavigate } from "react-router-dom";
 
 interface LoginFormInputs {
   email: string;
@@ -21,6 +22,8 @@ const LoginForm = () => {
   const [loginError, setLoginError] = useState<string | null>(null);
   const { setValue } = useGlobalContext();
 
+  const navigate = useNavigate();
+
   const onSubmit: SubmitHandler<LoginFormInputs> = async (data) => {
     setLoginError(null); 
 
@@ -30,6 +33,7 @@ const LoginForm = () => {
       setValue(token); 
       alert("Inicio de sesión exitoso. Token guardado en contexto.");
       reset();
+      navigate("/home");
 
     } catch (error) {
       setLoginError("Hubo un error al iniciar sesión. Inténtalo nuevamente.");
